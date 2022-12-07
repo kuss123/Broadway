@@ -63,7 +63,7 @@ export const loginUser = async (req, res, next) => {
         expiresIn: "1d",
       });
       res.cookie("cookiename", token, { httpOnly: true, secure: true });
-      res.status(200).send("login success");
+      res.status(200).json(token);
     } else {
       res.status(401).send("invalid credentials");
     }
