@@ -20,7 +20,7 @@ export const sendMail = async (email, token, host) => {
       subject: "reset password",
       html: `
             <h1> click the link to reset the password </h1>
-            <a href="http://${host}/api/reset/${token}"> Link ho hai </a>
+            <a href="http://${host}/reset/${token}"> Link ho hai </a>
         `,
     };
 

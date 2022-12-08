@@ -15,6 +15,7 @@ export const registerUser = async (req, res, next) => {
     }).save();
     res.status(201).json(user);
   } catch (error) {
+    console.log(error);
     next(error);
   }
 };
@@ -116,7 +117,7 @@ export const resetPassword = async (req, res, next) => {
       user.password = newPassword;
       await user.save();
 
-      console.log("user>>>", user);
+      
       res.send(user);
     }
   } catch (error) {
